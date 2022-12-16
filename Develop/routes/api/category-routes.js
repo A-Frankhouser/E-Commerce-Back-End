@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Products
   Category.findOne({
     where: {
-      id: reg.params.id
+      id: req.params.id
     },
     include: [{
       model: Product,
